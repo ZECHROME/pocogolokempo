@@ -9,24 +9,38 @@
             <li><a href="/pocogolo/#struktur">Perangkat Desa</a></li>
             <li><a href="/pocogolo/#contact-section">Kontak</a></li>
 
+            <!-- REGULASI DROPDOWN -->
             <li class="dropdown">
                 <a href="#">Regulasi ▾</a>
                 <ul class="dropdown-menu">
-                    <li><a class="drop-a" href="/pocogolo/documents.php">Arsip Dokumen</a></li>
-                    <li><a class="drop-a" href="/pocogolo/perkades.html">Perkades</a></li>
-                    <li><a class="drop-a" href="/pocogolo/perdes.html">Perdes</a></li>
-                    <li><a class="drop-a" href="/pocogolo/sk-kepala-desa.html">SK Kepala Desa</a></li>
+                    <li>
+                        <a class="drop-a" href="/pocogolo/documents.php">
+                            Arsip Dokumen
+                        </a>
+                    </li>
+
+                    <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+                    <li>
+                        <a class="drop-a" href="/pocogolo/admin/activity-log.php">
+                            Activity Log
+                        </a>
+                    </li>
+                    <?php endif; ?>
                 </ul>
             </li>
 
-            <?php if (isset($_SESSION['admin'])): ?>
-            <!-- ADMIN LOGGED IN -->
+            <!-- AUTH SECTION -->
+            <?php if (isset($_SESSION['role'])): ?>
             <li>
                 <a href="/pocogolo/auth/logout.php">Logout</a>
             </li>
             <?php else: ?>
-            <!-- PUBLIC USER -->
-            <li><a onclick="openLoginModal()">Database</a></li>
+            <li>
+                <a href="/pocogolo/auth/login.php">Login</a>
+            </li>
+            <li>
+                <a href="/pocogolo/auth/register.php">Daftar</a>
+            </li>
             <?php endif; ?>
         </ul>
 
