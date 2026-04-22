@@ -60,15 +60,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     <img src="./public/images/poco-3.jpeg" />
                     <img src="./public/images/poco-1.jpeg" />
                     <img src="./public/images/poco-2.jpeg" />
-                    <img src="./public/images/poco-3.jpeg" />
-                    <img src="./public/images/poco-1.jpeg" />
-                    <img src="./public/images/poco-2.jpeg" />
-                    <img src="./public/images/poco-3.jpeg" />
-                    <img src="./public/images/poco-1.jpeg" />
-                    <img src="./public/images/poco-2.jpeg" />
-                    <img src="./public/images/poco-3.jpeg" />
-                    <img src="./public/images/poco-1.jpeg" />
-                    <img src="./public/images/poco-2.jpeg" />
                 </div>
             </div>
         </div>
