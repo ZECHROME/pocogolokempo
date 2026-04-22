@@ -1084,6 +1084,12 @@ nav.container {
   background-color: #1a365d;
 }
 
+.switch-span {
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: underline;
+}
+
 /* Struktus Section */
 #struktur {
   padding: 100px 40px;

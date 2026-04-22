@@ -212,7 +212,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 <p class="switch-text">
                     Belum punya akun?
-                    <span class="switch-span" onclick="showRegister()">Daftar di sini</span>
+                    <a href="#" class="switch-span" onclick="showRegister(); return false;">
+                        Daftar di sini
+                    </a>
                 </p>
             </form>
 
