@@ -25,5 +25,5 @@ $stmt = $pdo->prepare("
 ");
 $stmt->execute([$name, $email, $password]);
 
-header("Location: /pocogolo/auth/login.php");
+header("Location: ../index.php");
 exit;

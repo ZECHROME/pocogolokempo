@@ -28,6 +28,23 @@
         font-weight: 600;
     }
 
+    .switch-text {
+        margin-top: 15px;
+        font-size: 13px;
+        text-align: center;
+        color: #777;
+    }
+
+    .switch-span {
+        color: #2f6fed !important; 
+        cursor: pointer;
+        font-weight: 500;
+    }
+
+    .switch-span:hover {
+        text-decoration: underline;
+    }
+
     /* ==========================
        NAVBAR BASE
     ========================== */
@@ -924,6 +941,8 @@ nav.container {
     .close:hover {
         color: #d69e2e;
     }
+
+    
 
     /* Login Modal (Integrated from Previous Code) */
     #loginModal {

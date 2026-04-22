@@ -13,6 +13,16 @@
         rel="stylesheet">
 </head>
 
+<?php if(isset($_GET['register']) && $_GET['register'] == 'success'): ?>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    showLogin(); // kembali ke login form
+    document.getElementById("loginModal").style.display = "block";
+    alert("Pendaftaran berhasil! Silakan login.");
+});
+</script>
+<?php endif; ?>
+
 <body>
     <!-- Star Particle Canvas -->
     <canvas id="stars-canvas"></canvas>
@@ -145,7 +155,7 @@
     </section>
 
     <!-- Lightbox Modal -->
-    <div id="modal" class="modal">
+    <!-- <div id="modal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <div class="modal-content">
             <img id="modalImg" src="" alt="Gambar Besar" />
@@ -154,7 +164,7 @@
             </div>
         </div>
     </div>
-    <!-- Login Modal (New Integration) -->
+    
     <div id="loginModal" class="modal">
         <span class="close" onclick="closeLoginModal()" style="top: 10px; right: 20px; font-size: 30px">&times;</span>
         <div id="loginLoader">
@@ -174,6 +184,57 @@
                 <button class="login-button" type="submit">Masuk</button>
             </form>
             <p style="margin-top: 20px; font-size: 12px; color: #888">&copy; 2025 Perangkat Desa Poco Golo Kempo</p>
+        </div>
+    </div> -->
+    <!-- Login / Register Modal -->
+    <div id="loginModal" class="modal">
+        <span class="close" onclick="closeLoginModal()" style="top: 10px; right: 20px; font-size: 30px">&times;</span>
+
+        <div id="loginLoader">
+            <div class="login-spinner"></div>
+        </div>
+
+        <div id="loginContainer" class="login-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Lambang_Kabupaten_Manggarai_Barat.png"
+                alt="Logo Kabupaten Manggarai Barat" class="login-logo" />
+
+            <h1 class="login-h1">Sistem Database<br />Perangkat Desa Poco Golo Kempo</h1>
+
+            <!-- LOGIN FORM -->
+            <form class="login-form" id="loginForm" action="auth/login.php" method="post">
+                <label class="login-label">Username / Email</label>
+                <input class="login-input" type="text" name="username" required />
+
+                <label class="login-label">Password</label>
+                <input class="login-input" type="password" name="password" required />
+
+                <button class="login-button" type="submit">Masuk</button>
+
+                <p class="switch-text">
+                    Belum punya akun?
+                    <span class="switch-span" onclick="showRegister()">Daftar di sini</span>
+                </p>
+            </form>
+
+            <!-- REGISTER FORM -->
+            <form class="login-form" id="registerForm" action="auth/register.php" method="post" style="display:none;">
+                <label class="login-label">Email</label>
+                <input class="login-input" type="email" name="email" required />
+
+                <label class="login-label">Password</label>
+                <input class="login-input" type="password" name="password" required />
+
+                <button class="login-button" type="submit">Daftar</button>
+
+                <p class="switch-text">
+                    Sudah punya akun?
+                    <span class="switch-span" onclick="showLogin()">Login di sini</span>
+                </p>
+            </form>
+
+            <p style="margin-top: 20px; font-size: 12px; color: #888">
+                &copy; 2025 Perangkat Desa Poco Golo Kempo
+            </p>
         </div>
     </div>
 
@@ -330,6 +391,15 @@
         </div>
     </footer>
     <script>
+    function showRegister() {
+        document.getElementById("loginForm").style.display = "none";
+        document.getElementById("registerForm").style.display = "block";
+    }
+
+    function showLogin() {
+        document.getElementById("registerForm").style.display = "none";
+        document.getElementById("loginForm").style.display = "block";
+    }
     // Star Particle Effect
     function initStars() {
         const canvas = document.getElementById("stars-canvas");

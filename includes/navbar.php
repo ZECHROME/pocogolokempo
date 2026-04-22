@@ -15,43 +15,27 @@ if (session_status() === PHP_SESSION_NONE) {
             <li><a href="/pocogolo/#struktur">Struktur</a></li>
             <li><a href="/pocogolo/#contact-section">Kontak</a></li>
 
-            <!-- DOKUMEN (NO DROPDOWN) -->
+            <!-- MENU DATABASE -->
             <li>
-                <a href="/pocogolo/documents.php">Dokumen</a>
+                <?php if (isset($_SESSION['role'])): ?>
+                <a href="/pocogolo/documents.php">Database</a>
+                <?php else: ?>
+                <a href="#" onclick="openLoginModal(); return false;">Database</a>
+                <?php endif; ?>
             </li>
 
-            <!-- AUTH SECTION -->
-            <?php if (isset($_SESSION['role'])): ?>
-
-            <?php if ($_SESSION['role'] === 'admin'): ?>
+            <!-- ADMIN ONLY -->
+            <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
             <li>
                 <a href="/pocogolo/admin/activity_log.php">Riwayat</a>
             </li>
             <?php endif; ?>
 
+            <!-- LOGOUT -->
+            <?php if (isset($_SESSION['role'])): ?>
             <li>
                 <a href="/pocogolo/auth/logout.php">Logout</a>
             </li>
-
-            <?php else: ?>
-
-            <!-- LOGIN / REGISTER DROPDOWN -->
-            <li class="dropdown">
-                <a href="#">Akun ▾</a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a class="drop-a" href="/pocogolo/auth/login.php">
-                            Login
-                        </a>
-                    </li>
-                    <li>
-                        <a class="drop-a" href="/pocogolo/auth/register.php">
-                            Daftar
-                        </a>
-                    </li>
-                </ul>
-            </li>
-
             <?php endif; ?>
         </ul>
 
