@@ -9,11 +9,11 @@ if (session_status() === PHP_SESSION_NONE) {
         <div class="logo">Desa Poco Golo Kempo</div>
 
         <ul class="nav-links" id="navLinks">
-            <li><a href="/pocogolo/#home">Beranda</a></li>
-            <li><a href="/pocogolo/#about">Tentang</a></li>
-            <li><a href="/pocogolo/#gallery">Galeri</a></li>
-            <li><a href="/pocogolo/#struktur">Struktur</a></li>
-            <li><a href="/pocogolo/#contact-section">Kontak</a></li>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#gallery">Galeri</a></li>
+            <li><a href="#struktur">Struktur</a></li>
+            <li><a href="#contact-section">Kontak</a></li>
 
             <!-- MENU DATABASE -->
             <li>
