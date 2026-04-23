@@ -255,79 +255,79 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
     </div>
 
-    <section id="struktur">
-        <h2 class="struktur-title">Struktur Perangkat Desa</h2>
+<section id="struktur">
+    <h2 class="struktur-title">Struktur Perangkat Desa Poco Golo Kempo</h2>
 
-        <!-- Kepala Desa -->
-        <div class="leader">
-            <h3>Kepala Desa</h3>
-            <p>Kornelis De Mose</p>
+    <!-- Kepala Desa -->
+    <div class="leader">
+        <h3>Kepala Desa</h3>
+        <p>Kornelis De Mose</p>
+    </div>
+
+    <!-- Sekretaris -->
+    <div class="leader secondary">
+        <h3>Sekretaris Desa</h3>
+        <p>Hasan Basri</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- KAUR -->
+    <div class="grid">
+        <div class="card">
+            <h4>Kaur Keuangan</h4>
+            <span>Karolus Ladi</span>
         </div>
-
-        <!-- Sekretaris -->
-        <div class="leader secondary">
-            <h3>Sekretaris Desa</h3>
-            <p>Rofinus Subandri</p>
+        <div class="card">
+            <h4>Kaur Tata Usaha dan Umum</h4>
+            <span>Helmiyati</span>
         </div>
-
-        <div class="divider"></div>
-
-        <!-- KAUR -->
-        <div class="grid">
-            <div class="card">
-                <h4>Kaur Keuangan</h4>
-                <span>Maria Sulastri Sartika, S.E</span>
-            </div>
-            <div class="card">
-                <h4>Kaur Perencanaan</h4>
-                <span>Arkadius Seradib, S.T</span>
-            </div>
-            <div class="card">
-                <h4>Kaur TU dan Umum</h4>
-                <span>Biaksi, S.Si</span>
-            </div>
+        <div class="card">
+            <h4>Kaur Perencanaan</h4>
+            <span>Hironimus Yani</span>
         </div>
+    </div>
 
-        <div class="divider"></div>
+    <div class="divider"></div>
 
-        <!-- KASI -->
-        <div class="grid">
-            <div class="card">
-                <h4>Kasi Pelayanan</h4>
-                <span>Amir Safrudin, S.Pd</span>
-            </div>
-            <div class="card">
-                <h4>Kasi Pemerintahan</h4>
-                <span>Mariana Murni</span>
-            </div>
-            <div class="card">
-                <h4>Kasi Kesejahteraan</h4>
-                <span>Siti Fadila</span>
-            </div>
+    <!-- KASI -->
+    <div class="grid">
+        <div class="card">
+            <h4>Kasi Pemerintahan</h4>
+            <span>Ahmad Edi</span>
         </div>
-
-        <div class="divider"></div>
-
-        <!-- KEPALA DUSUN -->
-        <div class="grid small">
-            <div class="card">
-                <h4>Kadus Rambang I</h4>
-                <span>Yoseph Toft</span>
-            </div>
-            <div class="card">
-                <h4>Kadus Rambang II</h4>
-                <span>Oswaldus H. Manjelo</span>
-            </div>
-            <div class="card">
-                <h4>Kadus Compang I</h4>
-                <span>Fitri Ana</span>
-            </div>
-            <div class="card">
-                <h4>Kadus Compang II</h4>
-                <span>Heronymus K. Hansmu</span>
-            </div>
+        <div class="card">
+            <h4>Kasi Kesejahteraan</h4>
+            <span>Elista Naus</span>
         </div>
-    </section>
+        <div class="card">
+            <h4>Kasi Pelayanan</h4>
+            <span>Ahmad Faisal</span>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- KEPALA DUSUN -->
+    <div class="grid small">
+        <div class="card">
+            <h4>Kadus Rehak</h4>
+            <span>Abdul Majid</span>
+        </div>
+        <div class="card">
+            <h4>Kadus Limbung</h4>
+            <span>Siti Jelifa</span>
+        </div>
+        <div class="card">
+            <h4>Kadus Lara Mburak</h4>
+            <span>Rafael Randu</span>
+        </div>
+        <div class="card">
+            <h4>Kadus Lara Lujang</h4>
+            <span>Domisianus Jebadu</span>
+        </div>
+    </div>
+</section>
 
     <section id="contact-section">
         <h2 class="contact-title">Hubungi Kami</h2>
